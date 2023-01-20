@@ -5,7 +5,7 @@ def findClosestValueInBstHelper(tree, target, closest):
     currentNode = tree
 
     while currentNode is not None:
-        if abs(currentNode.value - target) < abs(closest - target):
+        if abs(currentNode - target) < abs(closest - target):
             closest = currentNode.value
 
         if target < currentNode.value:
@@ -14,7 +14,7 @@ def findClosestValueInBstHelper(tree, target, closest):
             currentNode = currentNode.right
         else:
             break
-
+        
     return closest
 
     
