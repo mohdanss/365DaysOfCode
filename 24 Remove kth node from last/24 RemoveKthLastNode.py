@@ -4,7 +4,7 @@ class LinkedList:
         self.value = value
         self.next = None
 
-
+# O(n) time | O(1) space
 def removeKthNodeFromEnd(head, k):
     currNode = head
     prevToTarget = head
