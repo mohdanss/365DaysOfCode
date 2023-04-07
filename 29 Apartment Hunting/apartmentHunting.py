@@ -88,13 +88,13 @@ def apartmentHunting(blocks, reqs):
         count = 2
         for req in reqs:
             print(minDistanceFromEachBlock[count][req])
-                if currMin[req] != float('inf'):
-            if block[req] is True:
-                currMin[req] = minDistanceFromEachBlock[count][req] = 0
-            else:
-                print(currMin, "--")
-                minDistanceFromEachBlock[count][req] = currMin[req] + 1
-                currMin[req] += 1
+            if currMin[req] != float('inf'):
+                if block[req] is True:
+                    currMin[req] = minDistanceFromEachBlock[count][req] = 0
+                else:
+                    print(currMin, "--")
+                    minDistanceFromEachBlock[count][req] = currMin[req] + 1
+                    currMin[req] += 1
         count += 1
 
     for b in minDistanceFromEachBlock:
